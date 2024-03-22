@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Pantheas.Toolkit.MAUI.Views.ContentPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Pantheas.Toolkit.MAUI.Views">
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <Grid
+                x:DataType="{x:Type local:ContentPage}"
+                BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                RowDefinitions="Auto, *"
+                ColumnDefinitions="*">
+                <ContentPresenter>
+                    <ContentPresenter.Triggers>
+                        <DataTrigger
+                            TargetType="ContentPresenter"
+                            Binding="{Binding ShouldInfoViewOverlapContent}"
+                            Value="True">
+                            <Setter Property="Grid.Row" Value="0" />
+                            <Setter Property="Grid.RowSpan" Value="2" />
+                        </DataTrigger>
+                        <DataTrigger
+                            TargetType="ContentPresenter"
+                            Binding="{Binding ShouldInfoViewOverlapContent}"
+                            Value="False">
+                            <Setter Property="Grid.Row" Value="1" />
+                            <Setter Property="Grid.RowSpan" Value="1" />
+                        </DataTrigger>
+                    </ContentPresenter.Triggers>
+                </ContentPresenter>
+
+                <ContentView Content="{Binding InfoView}" />
+            </Grid>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+</ContentPage>

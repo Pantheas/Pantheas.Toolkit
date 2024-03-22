@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Pantheas.Toolkit.Core</AssemblyName>
+    <RootNamespace>Pantheas.Toolkit.Core</RootNamespace>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Pantheas</Authors>
+    <PackageOutputPath>E:\Packages\Pantheas.Toolkit\</PackageOutputPath>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+</Project>
